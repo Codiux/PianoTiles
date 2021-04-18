@@ -1,3 +1,11 @@
+# General
+/build
+/debug
+/Debug
+/release
+/Release
+
+# CMake
 CMakeLists.txt.user
 CMakeCache.txt
 CMakeFiles
