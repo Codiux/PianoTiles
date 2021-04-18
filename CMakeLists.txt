@@ -10,7 +10,6 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 
 if (UNIX)
 	list(APPEND CMAKE_MODULE_PATH "/usr/local/cmake/Modules/")
-	add_compile_options(-Wall -Wextra -pedantic -Werror -Og)
 endif (UNIX)
 
 # Set to use C++17
@@ -25,6 +24,11 @@ find_package(spdlog REQUIRED)
 find_package(fmt REQUIRED)
 find_package(yaml-cpp REQUIRED)
 find_package(SFML 2.5 COMPONENTS system window graphics REQUIRED)
+
+target_compile_options(
+	"${PROJECT_NAME}" PRIVATE
+	-Wall -Wextra -pedantic -Werror -Og
+	)
 
 target_include_directories(
 	"${PROJECT_NAME}" PRIVATE
