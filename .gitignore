@@ -5,6 +5,9 @@
 /release
 /Release
 
+# Clangd
+.clangd
+
 # CMake
 CMakeLists.txt.user
 CMakeCache.txt
