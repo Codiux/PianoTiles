@@ -25,7 +25,7 @@ find_package(SFML 2.5 COMPONENTS system window graphics REQUIRED)
 
 target_compile_options(
 	"${PROJECT_NAME}" PRIVATE
-	-Wall -Wextra -pedantic -Werror -Og
+	-Wall -Wextra -pedantic -Og
 	)
 
 target_include_directories(
