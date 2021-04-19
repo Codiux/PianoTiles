@@ -1,6 +1,7 @@
 #include "Game.hpp"
 
 #include "Utility/Keyboard.hpp"
+#include "GameStates/MainMenuState.hpp"
 
 Game::Game()
 	: m_window(sf::VideoMode(400, 600), "PianoTiles")
@@ -8,7 +9,7 @@ Game::Game()
 	m_window.setKeyRepeatEnabled(false);
 	m_window.setFramerateLimit(60);
 
-	// m_gameStateManager.push<MainMenu>(m_gameStateManager, m_window);
+	m_gameStateManager.push<MainMenuState>(m_gameStateManager, m_window);
 }
 
 void Game::run()
