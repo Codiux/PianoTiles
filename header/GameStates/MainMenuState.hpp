@@ -6,6 +6,9 @@
 #include <SFML/Graphics/RenderTarget.hpp>
 #include <SFML/Window/Keyboard.hpp>
 
+#include <TGUI/Core.hpp>
+#include <TGUI/Backends/SFML.hpp>
+
 class MainMenuState final : public zfge::GameState
 {
 public:
@@ -22,4 +25,6 @@ private:
 	zfge::GameStateManager& m_gameStateManager;
 	
 	sf::RenderTarget& m_mainWindow;
+
+	mutable tgui::GuiSFML m_gui;
 };
