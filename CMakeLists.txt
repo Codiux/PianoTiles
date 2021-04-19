@@ -8,9 +8,7 @@ add_executable("${PROJECT_NAME}" ${SOURCES})
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
 
-if (UNIX)
-	list(APPEND CMAKE_MODULE_PATH "/usr/local/cmake/Modules/")
-endif (UNIX)
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake/Modules")
 
 # Set to use C++17
 set_target_properties(
