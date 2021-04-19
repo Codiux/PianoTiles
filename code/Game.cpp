@@ -3,9 +3,13 @@
 #include "Utility/Keyboard.hpp"
 #include "GameStates/MainMenuState.hpp"
 
+#include <TGUI/TGUI.hpp>
+
 Game::Game()
 	: m_window(sf::VideoMode(400, 600), "PianoTiles")
 {
+	tgui::setBackend(std::make_shared<tgui::BackendSFML>());
+
 	m_window.setKeyRepeatEnabled(false);
 	m_window.setFramerateLimit(60);
 
@@ -62,3 +66,7 @@ void Game::handleEvent()
 	}
 }
 
+Game::~Game()
+{
+	tgui::setBackend(nullptr);
+}
