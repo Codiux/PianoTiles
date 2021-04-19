@@ -32,5 +32,5 @@ The executable "PianoTiles" should appear if the build processes succeeded.
 ### Windows
 Work In Progress
 
-## About: Dependencies
+### Dependencies
 In order for the dependencies to be found, one must appends `CMAKE_PREFIX_PATH` with the directory in which `FindXXX.cmake`, `XXXConfig.cmake` or `xxx-config.cmake` can be found. SFML's SFMLConfig.cmake is usually located at `/usr/local/lib/cmake/SFML/` directory in linux systems, in which it's usually already included by default. If you can't find it, try using the `locate` command in linux, for example `locate SFMLConfig.cmake`.
