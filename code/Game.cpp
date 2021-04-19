@@ -10,6 +10,11 @@ Game::Game()
 {
 	tgui::setBackend(std::make_shared<tgui::BackendSFML>());
 
+	if (!sf::Shader::isAvailable())
+	{
+		throw std::runtime_error("Shader is not available in your computer. Please do something.");
+	}
+
 	m_window.setKeyRepeatEnabled(false);
 	m_window.setFramerateLimit(60);
 
