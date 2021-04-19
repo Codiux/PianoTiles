@@ -22,6 +22,7 @@ find_package(spdlog REQUIRED)
 find_package(fmt REQUIRED)
 find_package(yaml-cpp REQUIRED)
 find_package(SFML 2.5 COMPONENTS system window graphics REQUIRED)
+find_package(TGUI 0.9 REQUIRED)
 
 target_compile_options(
 	"${PROJECT_NAME}" PRIVATE
@@ -43,5 +44,6 @@ target_link_libraries(
 	sfml-graphics
 	sfml-window
 	sfml-system
+	tgui
 	spdlog::spdlog
 	)
