@@ -1,0 +1,9 @@
+Panel.rootPanel {
+    Size = (&.width, &.height);
+
+    Renderer {
+        BackgroundColor = black;
+        BorderColor = black;
+        TextureBackground = None;
+    }
+}
